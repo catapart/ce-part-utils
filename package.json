@@ -1,0 +1,43 @@
+{
+  "name": "ce-part-utils",
+  "version": "0.0.0",
+  "description": "Utilities for adding part and exportparts attributes to a custom HTML element, using classes and ids.",
+  "type": "module",
+  "main": "dist/ce-part-utils.js",
+  "module": "dist/ce-part-utils.mjs",
+  "types": "dist/ce-part-utils.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/ce-part-utils.ts --format cjs,esm --dts --clean",
+    "minify": "tsup src/ce-part-utils.ts --format esm --config ./tsup.config.min.ts --outDir ./dist --minify",
+    "lint": "tsup src/ce-part-utils.ts --format esm --tsconfig ./tsconfig.lint.json",
+    "package": "npm run build && npm run minify",
+    "release": "npm run package && changeset publish"
+  },
+  "keywords": [
+    "custom",
+    "element",
+    "html",
+    "part",
+    "exportparts",
+    "attribute",
+    "component",
+    "web component"
+  ],
+  "author": "catapart",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/catapart/ce-part-utils"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "changesets-gitlab": "^0.13.3",
+    "minify": "^11.4.0",
+    "terser": "^5.31.3",
+    "tsup": "^8.2.0",
+    "typescript": "^5.5.3"
+  }
+}
