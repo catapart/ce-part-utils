@@ -1,13 +1,15 @@
 // #region parts
 
+const htmlElementsSelector = ':not(slot,defs,g,rect,path,circle,ellipse,line,polygon,text,tspan,use,svg image,svg title,desc)';
+
 export function assignClassAndIdToPart(shadowRoot: ShadowRoot)
 {
-    const identifiedElements = [...shadowRoot.querySelectorAll('[id]')];
+    const identifiedElements = [...shadowRoot.querySelectorAll(`${htmlElementsSelector}[id]`)];
     for(let i = 0; i < identifiedElements.length; i++)
     {
         identifiedElements[i].part.add(identifiedElements[i].id);
     }
-    const classedElements = [...shadowRoot.querySelectorAll('[class]')];
+    const classedElements = [...shadowRoot.querySelectorAll(`${htmlElementsSelector}[class]`)];
     for(let i = 0; i < classedElements.length; i++)
     {
         classedElements[i].part.add(...classedElements[i].classList);
@@ -19,7 +21,7 @@ export type TagPartMap = Partial<{
 }>;
 export function assignTagToPart(shadowRoot: ShadowRoot, config?: TagPartMap)
 {
-    const elements = [...shadowRoot.querySelectorAll(':not(slot)')];
+    const elements = [...shadowRoot.querySelectorAll(`${htmlElementsSelector}`)];
     for(let i = 0; i < elements.length; i++)
     {
         const tagName = elements[i].tagName.toLowerCase() as keyof HTMLElementTagNameMap;
@@ -99,7 +101,7 @@ export function getExportPartsFromParts(shadowRoot: ShadowRoot, addNewlines: boo
     {
         const parts = [...item.part.values()]
         .map(part => {
-            const replacement = (replacements as any)[part];
+            const replacement = (replacements as any)?.[part];
             return (replacement != null) ? `${part}:${replacement}` : part;
         });
 
@@ -121,5 +123,6 @@ export function getExportPartsFromParts(shadowRoot: ShadowRoot, addNewlines: boo
 export function assignPartsAsExportPartsAttribute(shadowRoot: ShadowRoot, addNewlines: boolean = false, replacements?: PartExportPartMap)
 {
     const exportParts = getExportPartsFromParts(shadowRoot, addNewlines, replacements);
-    shadowRoot.host.setAttribute('exportparts', `${exportParts}`);
+    const existingExports = shadowRoot.host.getAttribute('exportparts');
+    shadowRoot.host.setAttribute('exportparts', `${existingExports == null ? '' : `${existingExports},`}${exportParts}`);
 }
