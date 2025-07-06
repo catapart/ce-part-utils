@@ -1,13 +1,15 @@
 // #region parts
 
+export const DEFAULT_ELEMENT_SELECTOR = ':not(slot,defs,g,rect,path,circle,ellipse,line,polygon,text,tspan,use,svg image,svg title,desc,template,template *)';
+
 export function assignClassAndIdToPart(shadowRoot: ShadowRoot)
 {
-    const identifiedElements = [...shadowRoot.querySelectorAll('[id]')];
+    const identifiedElements = [...shadowRoot.querySelectorAll(`${DEFAULT_ELEMENT_SELECTOR}[id]`)];
     for(let i = 0; i < identifiedElements.length; i++)
     {
         identifiedElements[i].part.add(identifiedElements[i].id);
     }
-    const classedElements = [...shadowRoot.querySelectorAll('[class]')];
+    const classedElements = [...shadowRoot.querySelectorAll(`${DEFAULT_ELEMENT_SELECTOR}[class]`)];
     for(let i = 0; i < classedElements.length; i++)
     {
         classedElements[i].part.add(...classedElements[i].classList);
@@ -19,7 +21,7 @@ export type TagPartMap = Partial<{
 }>;
 export function assignTagToPart(shadowRoot: ShadowRoot, config?: TagPartMap)
 {
-    const elements = [...shadowRoot.querySelectorAll(':not(slot)')];
+    const elements = [...shadowRoot.querySelectorAll(`${DEFAULT_ELEMENT_SELECTOR}`)];
     for(let i = 0; i < elements.length; i++)
     {
         const tagName = elements[i].tagName.toLowerCase() as keyof HTMLElementTagNameMap;
@@ -97,17 +99,25 @@ export function getExportPartsFromParts(shadowRoot: ShadowRoot, addNewlines: boo
     const exportPartsSet = new Set(([...shadowRoot.querySelectorAll('[part]')] as HTMLElement[])
     .map(item =>
     {
-        const parts = [...item.part.values()]
+        let parts = [...item.part.values()]
+        .filter(item => item != null)
         .map(part => {
-            const replacement = (replacements as any)[part];
+            const replacement = (replacements as any)?.[part];
             return (replacement != null) ? `${part}:${replacement}` : part;
         });
 
         const childExports = item.getAttribute('exportparts');
         if(childExports != null)
         {
-            const childParts = childExports.replaceAll(/[\s\n]/g, '').split(',');
-            parts.concat(...childParts);
+            const childParts = childExports
+            .replaceAll(/[\s\n]/g, "")
+            .split(",")
+            .map(item => item.indexOf(':') == -1 ? item : item.split(':')[1]);
+            // if(childExports.indexOf(':') != -1)
+            // {
+            //     console.log(childParts);
+            // }
+            parts = parts.concat(...childParts);
         }
 
         return parts;
@@ -121,5 +131,6 @@ export function getExportPartsFromParts(shadowRoot: ShadowRoot, addNewlines: boo
 export function assignPartsAsExportPartsAttribute(shadowRoot: ShadowRoot, addNewlines: boolean = false, replacements?: PartExportPartMap)
 {
     const exportParts = getExportPartsFromParts(shadowRoot, addNewlines, replacements);
-    shadowRoot.host.setAttribute('exportparts', `${exportParts}`);
+    const existingExports = shadowRoot.host.getAttribute('exportparts');
+    shadowRoot.host.setAttribute('exportparts', `${existingExports == null ? '' : `${existingExports},`}${exportParts}`);
 }
