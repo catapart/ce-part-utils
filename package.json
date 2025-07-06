@@ -34,7 +34,6 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
-    "changesets-gitlab": "^0.13.3",
     "minify": "^11.4.0",
     "terser": "^5.31.3",
     "tsup": "^8.2.0",
