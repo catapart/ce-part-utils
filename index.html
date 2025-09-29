@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ce-part-utils Introduction</title>
+    <link rel="stylesheet" href="./introduction.css">
+    <link rel="stylesheet" href="./index.css">
+    <script type="module" src="./demolibs/code-example.min.js"></script>
+</head>
+<body>
+    <main class="centered-single-column">
+        <header class="full-width">
+            <span class="arrow">
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+            </span>
+            <span class="arrow reverse">
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+            </span>
+            <span class="arrow">
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+            </span>
+            <span class="arrow reverse">
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+            </span>
+            <span class="arrow">
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+            </span>
+            <div class="content centered-single-column">
+                <div class="text">
+                    <div class="breadcrumbs">
+                        <a class="breadcrumb" href="https://github.com/catapart/">@catapart</a>
+                    </div>
+                    <h1 class="title">ce-part-utils</h1>
+                    <div class="actions">
+                        <nav>
+                            <a href="./test-runner.html">Test Runner</a>
+                            <a href="./documentation/">Documentation</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <noscript>
+            <div class="noscript">
+                <p>This page is an introduction to a javascript library that includes dynamic and interactive content. Javascript libraries require javascript to function and cannot process at all if javascript is disbled or otherwise prevented from running.</p>
+                <p>To demonstrate the library, this page also uses a custom element designed for showcasing examples of code. To see the library in action, as well as formatted example code and previews of how the library can be used, please enable javascript.</p>
+            </div>
+        </noscript>
+        <article class="overview">
+            <header>
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                <h2>Overview</h2>
+            </header>
+            <section class="page">
+                <header>
+                    <h3>Introduction</h3>
+                </header>
+                <p>This page is an introduction to the <code>ce-part-utils</code> library. It provides a description of the library for unfamiliar developers and acts as a reference for documentation and examples.</p>
+            </section>
+            <section class="element">
+                <header>
+                    <h3>Library</h3>
+                </header>
+                <!-- what -->
+                <p>The <code>ce-part-utils</code> library contains utilities for adding part and exportparts attributes to a custom HTML element, using classes, ids, tags and other element properties.</p>
+                <!-- why -->
+                <p>The element is intended to help with managing part assignment for custom elements that have a lot of shadow DOM child elements, and for custom elements that employ child custom elements that are entirely private to the parent element.</p>
+                <!-- how -->
+                <p>To use the <code>ce-part-utils</code> functions, import them individually from the library's file.</p>
+                <p>Provide your custom element's shadowRoot to the functions to assign parts to the children of those shadowRoots.</p>
+                <!-- links (app link,) -->
+            </section>
+            <section class="install">
+                <header>
+                    <h3>Installation</h3>
+                </header>
+                <p>This library is available as a single file that can be referenced using a <code>&lt;script&gt;</code> element. It can also be installed using any of the javascript package managers below:</p>
+                <code-example id="install-example" class="stack npm" preview="false">
+                    <span class="code-badge" slot="code-badge">
+                        <span class="badge npm"></span>
+                        <span class="badge bun"></span>
+                        <span class="badge pnpm"></span>
+                        <span class="badge deno"></span>
+                    </span>
+                    <span class="code-title" slot="code-title">
+                        <span class="title option npm">npm</span>
+                        <span class="title option bun">bun</span>
+                        <span class="title option pnpm">pnpm</span>
+                        <span class="title option deno">deno</span>
+                    </span>
+                    <code slot>
+                        npm install ce-part-utils
+                    </code>
+                </code-example>
+                <script>
+                    const options = ['npm', 'bun', 'pnpm', 'deno', 'yarn'];
+                    const scripts = ['npm install ce-part-utils', 'bun add ce-part-utils', 'pnpm install ce-part-utils', 'deno install npm:ce-part-utils', 'yarn'];
+                    document.addEventListener('DOMContentLoaded', () =>
+                    {
+                        const installExample = document.getElementById('install-example');
+                        installExample.addEventListener('click', (event) =>
+                        {
+                            const composedPath = event.composedPath();
+                            const title = composedPath.find(item => item instanceof HTMLElement && item.classList.contains('option'));
+                            if(title != null)
+                            {
+
+                                installExample.classList.remove(...options);
+                                for(let i = 0; i < options.length; i++)
+                                {
+                                    if(title.classList.contains(options[i]))
+                                    {
+                                        installExample.classList.add(options[i]);
+                                        installExample.replaceSource(scripts[i]);
+                                        break;
+                                    }
+                                }
+                            }
+                        });
+                    });
+                </script>
+            </section>
+        </article>
+        <div class="documentation">
+            <header><h2>Documentation</h2></header>
+            <div class="docs-info card horizontal element">
+                <header>
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <h3>Library Documentation</h3>
+                </header>
+                <div class="description">
+                    <p>Use the library documentation to learn about each of the features that <code>ce-part-utils</code> provides.</p>
+                    <div class="actions">
+                        <a href="./readme.md">See the library's README</a>
+                        <a class="button-link" href="./readme.md">View Library Documentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <article class="quick-reference">
+            <header>
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                <h2>Quick Reference</h2>
+            </header>
+            <div class="description">
+                <h3>Quick Start Snippet</h3>
+                <p>Copy the code from this example and paste it into your project to have a simple starting point for working with this library.</p>
+            </div>
+            <code-example class="stack">
+                <code slot class="language-js">
+                </code>
+            </code-example>
+            <div class="description">
+                <h3>Quick Reference Tables</h3>
+                <p>Use the tables, below, to reference the key identifiers used by this library, including enumerators, assignments, constants, and other "well-known" content.</p>
+            </div>
+            <section class="reference configs">
+                <header><h3>Configs</h3></header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>InputTypePartMap</code></td>
+                            <td>
+                                <p>Optional second parameter of the <code>assignInputTypeToPart()</code> function.</p>
+                                <p>Maps an <code>&lt;input&gt;</code>'s <code>type</code> to a string value that will be used as a <code>part</code> value for <code>&lt;inputs&gt;</code> of that <code>type</code>.</p>
+                            </td>
+                            <td><pre><code>{
+    button?:string;
+    checkbox?:string;
+    color?:string;
+    date?:string;
+    ["datetime-local"]?:string;
+    email?:string;
+    file?:string;
+    hidden?:string;
+    image?:string;
+    month?:string;
+    number?:string;
+    password?:string;
+    radio?:string;
+    range?:string;
+    reset?:string;
+    search?:string;
+    submit?:string;
+    tel?:string;
+    text?:string;
+    time?:string;
+    url?:string;
+    week?:string;
+    ["text-numeric"]:string = "number";
+}</code></pre></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="reference enumerators">
+                <header><h3>Enumerators</h3></header>
+                <div class="message">
+                    <p>This library does not expose any enumerators or enumerator-like objects.</p>
+                </div>
+            </section>
+            <section class="reference constants">
+                <header><h3>Constants</h3></header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>DEFAULT_ELEMENT_SELECTOR</code></td>
+                            <td>The default selector value when querying for the decendants in a <code>shadowRoot</code>.</td>
+                            <td><code>":not(slot,defs,g,rect,path,circle,ellipse,line,polygon,text,tspan,use,svg image,svg title,desc,template,template *)"</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="reference assignments">
+                <header><h3>Assignments</h3></header>
+                <div class="description">
+                    Assignments are values that are assigned by this library during its functional processing.
+                </div>
+                <div class="message">
+                    <p>This library does not use any values directly from source code to assign values, properties, or attributes. All assignments, if any, are sourced from library input or from configuration content.</p>
+                </div>
+            </section>
+        </article>
+        <div class="examples">
+            <header><h2>Examples</h2></header>
+            <div class="card horizontal">
+                <header>
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                </header>
+                <div class="description">
+                    <p>These examples are provided as simple references for practical use cases.</p>
+                    <p>Each example is using the default selector to query for elements within a <code>shadowRoot</code>, </p>
+                </div>
+            </div>
+            <div class="example">
+                <header><h3><code>assignClassAndIdToPart(shadowRoot)</code></h3></header>
+                <div class="description">
+                    <div class="filler"></div>
+                    <div class="text">
+                        <p>This function takes a <code>shadowRoot</code> as a parameter and then queries for any of its decendants that have <code>id</code> or <code>class</code> attributes.</p>
+                        <p>For each element returned by the query, the function assigns the element's <code>id</code> attribute value, and each of its <code>class</code> values, to its <code>part</code> attribute.</p>
+                    </div>
+                </div>
+                
+                <code-example preview="false" class="stack">
+                    <code slot class="language-js">
+                        import { assignClassAndIdToPart } from 'ce-part-utils';
+                  
+                        const COMPONENT_TAG_NAME = 'custom-element';
+                        export class MyCustomElement extends HTMLElement     
+                        { 
+                            constructor()
+                            {
+                                super();
+                                this.attachShadow({ mode: "open" });
+                                this.shadowRoot.innerHTML = `&lt;div id="first-element" class="container"&gt;&lt;/div&gt;`
+                            }
+                            connectedCallback()
+                            {
+                                assignClassAndIdToPart(this.shadowRoot);
+                            }
+                        }
+
+                        if(customElements.get(COMPONENT_TAG_NAME) == null)
+                        {
+                            customElements.define(COMPONENT_TAG_NAME, MyCustomElement);
+                        }
+                    </code>
+                </code-example>
+            </div>
+        </div>
+        <article class="questions-answers">
+            <header>
+                <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                <h2>Questions &amp; Answers</h2>
+            </header>
+            <details class="qa-pair">
+                <summary class="question">
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <span class="value">Why would I want to assign ids, classes, tags, etc as <code>part</code> values?</span>
+                </summary>
+                <div class="answer">
+                    <div class="simple">
+                        <span class="label">Simplified:</span>
+                        <span class="value">To allow custom styling.</span>
+                    </div>
+                    <div class="more">
+                        <header><h5>Details:</h5></header>
+                        <p>Parts are weird features in the custom element specification. The intention seems to be to let you enforce certain styles without interference, while allowing you to specify which elements can have their styles overriden.</p>
+                        <p>I can appreciate the intention of the public/private split for this kind of thing, but it has not held up for me, in practice. With styling features like <code>grid</code>, and the inherent need for developers to be able to impose their design on the modules that make up their apps, there never seems to be any reason to disallow style overrides.</p>
+                        <p>So to allow external styling of any arbitrary element in the shadow DOM, parts are added. Unfortunately, parts are limited. Not only in the external selectors (no cascading), but also in the internal selectors. An acutal "part" selector doesn't exist. The only way to select them is by using the attribute selector. Which is limiting because you would have to use wildcard selectors and chaining in order to get a simple dual-class part selection.</p>
+                        <p>Which brings us to this library. It allows you to use ids and classes with internal styling and scripting, and then systematically applies those attribute values as part values.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="qa-pair">
+                <summary class="question">
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <span class="value">Should I use this for developing custom elements (web components)?</span>
+                </summary>
+                <div class="answer">
+                    <div class="simple">
+                        <span class="label">Simplified:</span>
+                        <span class="value">Only if your custom element is particularly complex, or is an entire web app.</span>
+                    </div>
+                    <div class="more">
+                        <header><h5>Details:</h5></header>
+                        <p>Generally speaking, this library acts more like a kludge or a hack than a trustworthy solution. Assigning parts should be a very targeted and very deliberate process. It is meant to differentiate the internal parts of your design from the external. It is unlikely that every <code>id</code> and <code>class</code> would need to be assigned as a part for every element.</p>
+                        <p>On a more practical side, the library is not very comprehensive. It does not account for the very common case of inserting content. You can query every element and assign parts, and you can do that as many times as you like since parts act like sets and disallow duplicates. But if you add a new element to the DOM, it is pretty inefficient to query for every element just to apply parts to a single new element.</p>
+                        <p>So you end up having to run the assignment once, and then having to manage each new element's parts anyway. It just is not very useful for most custom element development.</p>
+                        <p>But there are exceptions to every rule and sometimes lots of shadow DOM child elements are unavoidable, or nested custom elements need to expose the nested <code>part</code>s for external styling. In those cases, it is better to have a single library that can be referenced, rather than to recreate the methods for each custom element.</p>
+                    </div>
+                </div>
+            </details>
+            <details class="qa-pair">
+                <summary class="question">
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <span class="value">What is this library for?</span>
+                </summary>
+                <div class="answer">
+                    <div class="simple">
+                        <span class="label">Simplified:</span>
+                        <span class="value">Shimming in styling functionality for apps that are built as web components.</span>
+                    </div>
+                    <div class="more">
+                        <header><h5>Details</h5></header>
+                        <p>While this library is simple and flawed, it also manages to be useful in very specific scenarios.</p>
+                        <p>If a particularly intricate custom element requires a lot of elements, then you end up with an exception to the "rule" of not using this library. In most cases, you should not have more than 20 or so elements, which should be fine to assign parts manually.</p>
+                        <p>After that point, though, manual assignment can be too inexact to be useful. In that case, this library makes sure that each id and class are ported to parts identically. It limits the places that require changes later.</p>
+                        <p>In another example, if one component is nested inside of another component, assigning the parts and then copying those parts to the exportedparts attribute would be just as inexact. So if you have completely nested components (components that are never used by implementing developers, only the library), then this library can be useful in that situation, too.</p>
+                    </div>
+                </div>
+            </details>
+        </article>
+        <footer class="full-width">
+
+        </footer>
+    </main>
+    <div id="icon-definitions">
+        <svg id="icon-definition_arrow" viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+            <g stroke-width='0'></g>
+            <g stroke-linecap='round' stroke-linejoin='round'></g>
+            <g>
+                <path 
+                fill="var(--fill-color)"
+                d='M8.72798 15.795L3.72798 7.795C3.10356 6.79593 3.82183 5.5 4.99998 5.5L15 5.5C16.1781 5.5 16.8964 6.79593 16.272 7.795L11.272 15.795C10.6845 16.735 9.31549 16.735 8.72798 15.795Z'></path>
+            </g>
+        </svg>
+    </div>
+</body>
+</html>
