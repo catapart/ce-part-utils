@@ -4,11 +4,19 @@ export const DEFAULT_ELEMENT_SELECTOR = ':not(slot,defs,g,rect,path,circle,ellip
 
 export function assignClassAndIdToPart(shadowRoot: ShadowRoot)
 {
+    assignIdToPart(shadowRoot);
+    assignClassToPart(shadowRoot);
+}
+export function assignIdToPart(shadowRoot: ShadowRoot)
+{
     const identifiedElements = [...shadowRoot.querySelectorAll(`${DEFAULT_ELEMENT_SELECTOR}[id]`)];
     for(let i = 0; i < identifiedElements.length; i++)
     {
         identifiedElements[i].part.add(identifiedElements[i].id);
     }
+}
+export function assignClassToPart(shadowRoot: ShadowRoot)
+{
     const classedElements = [...shadowRoot.querySelectorAll(`${DEFAULT_ELEMENT_SELECTOR}[class]`)];
     for(let i = 0; i < classedElements.length; i++)
     {

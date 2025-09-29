@@ -1,21 +1,24 @@
 {
   "name": "ce-part-utils",
   "version": "0.0.0",
-  "description": "Utilities for adding part and exportparts attributes to a custom HTML element, using classes and ids.",
+  "description": "Utilities for adding part and exportparts attributes to a custom HTML element, using classes, ids, tags and other element properties.",
   "type": "module",
-  "main": "dist/ce-part-utils.js",
-  "module": "dist/ce-part-utils.mjs",
-  "types": "dist/ce-part-utils.d.ts",
-  "files": [
-    "dist"
-  ],
+  "types": "ce-part-utils.d.ts",
   "scripts": {
-    "build": "tsup src/ce-part-utils.ts --format cjs,esm --dts --clean",
-    "minify": "tsup src/ce-part-utils.ts --format esm --config ./tsup.config.min.ts --outDir ./dist --minify",
-    "lint": "tsup src/ce-part-utils.ts --format esm --tsconfig ./tsconfig.lint.json",
-    "package": "npm run build && npm run minify",
-    "release": "npm run package && changeset publish"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "release": "pnpm run build && changeset publish"
   },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@rollup/plugin-terser": "^0.4.4",
+    "typescript": "^5.5.3",
+    "vite": "^7.1.7",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "license": "CC0-1.0",
+  "author": "catapart",
   "keywords": [
     "custom",
     "element",
@@ -26,17 +29,8 @@
     "component",
     "web component"
   ],
-  "author": "catapart",
-  "license": "CC0-1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/catapart/ce-part-utils"
-  },
-  "devDependencies": {
-    "@changesets/cli": "^2.27.7",
-    "minify": "^11.4.0",
-    "terser": "^5.31.3",
-    "tsup": "^8.2.0",
-    "typescript": "^5.5.3"
   }
 }
