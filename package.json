@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": "Utilities for adding part and exportparts attributes to a custom HTML element, using classes, ids, tags and other element properties.",
   "type": "module",
-  "types": "ce-part-utils.d.ts",
+  "main": "dist/ce-part-utils.umd.js",
+  "module": "dist/ce-part-utils.js",
+  "types": "dist/ce-part-utils.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
