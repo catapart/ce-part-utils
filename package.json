@@ -1,6 +1,6 @@
 {
   "name": "ce-part-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for adding part and exportparts attributes to a custom HTML element, using classes, ids, tags and other element properties.",
   "type": "module",
   "main": "dist/ce-part-utils.umd.js",
