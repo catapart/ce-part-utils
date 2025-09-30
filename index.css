@@ -1,3 +1,29 @@
 .documentation
 {
 }
+
+table th.accent
+,table td.accent
+{
+    width: 220px;
+}
+
+/* mobile only */
+@media screen and (max-width: 650px)
+{
+    
+}
+/* desktop only */
+@media screen and (min-width: 650px)
+{
+    code-example:not([preview])
+    {
+        grid-template-columns: 1fr 200px;
+    }
+    code-example:not([preview])::part(spinner)
+    ,code-example:not([preview])::part(preview)
+    {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
