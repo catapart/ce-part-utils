@@ -1,5 +1,52 @@
-.documentation
+main > header .content .text
 {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto 1fr;
+    gap: var(--gap-large);
+}
+
+main > header .repos
+{
+    align-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+main > header .repos .repo
+{
+    /* display: grid; */
+    /* justify-content: flex-end; */
+}
+
+main > header .repos .icon
+{
+    width: var(--repo-icon-size);
+    height: var(--repo-icon-size);
+    border-radius: 50%;
+}
+
+main > header .actions
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+main > header .actions a
+{
+    color: var(--text-highlight-anchor);
+    text-decoration: none;
+    padding: var(--gap-small) var(--gap);
+    display: inline-block;
+    border-radius: 30px;
+    margin-block: var(--gap-small);
+}
+main > header .actions a:hover
+{
+    color: #ffffff;
+    text-shadow: 1px 1px 0 rgb(0 0 0 / .2);
+    background: rgb(0 0 0 / .3);
 }
 
 table th.accent
@@ -11,7 +58,7 @@ table th.accent
 /* mobile only */
 @media screen and (max-width: 650px)
 {
-    
+
 }
 /* desktop only */
 @media screen and (min-width: 650px)
