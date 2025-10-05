@@ -254,6 +254,7 @@ article > header
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    gap: var(--gap);
 }
 article > header h2
 {
@@ -263,7 +264,14 @@ article > header .icon
 {
     width: 32px;
     height: 32px;
-    --fill-color: var(--icon-fill);;
+    --fill-color: var(--icon-fill);
+    --fill-color-secondary: var(--blue-med)
+}
+
+.example-icon
+,.docs-icon
+{
+    --fill-color-secondary: var(--blue-darker);
 }
 
 article > section
@@ -526,8 +534,8 @@ footer
 
 .card > header .icon
 {
-    width: 64px;
-    height: 64px;
+    width: 84px;
+    height: 84px;
     --fill-color: var(--orange);
 }
 .card > header h3
