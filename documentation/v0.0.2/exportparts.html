@@ -66,40 +66,9 @@
                             <summary>
                                 <h4>Methods</h4>
                             </summary>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Function Name</th>
-                                        <th>Parameters</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-label="Name">
-                                            <div class="cell-content">
-                                                None
-                                            </div>
-                                        </td>
-                                        <td data-label="Description">
-                                            <div class="cell-content">
-                                                <p>This object does not expose any methods.</p>
-                                            </div>
-                                        </td>
-                                        <td data-label="Function Name">
-                                            <div class="cell-content">
-                                                N/A
-                                            </div>
-                                        </td>
-                                        <td data-label="Parameters">
-                                            <div class="cell-content">
-                                                N/A
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="message">
+                                <p>This object does not expose any methods.</p>
+                            </div>
                         </details>
                     </div>
                 </div>
@@ -184,7 +153,7 @@
                                         <td data-label="Description">
                                             <div class="cell-content">
                                                 <p><em>Optional</em></p>
-                                                <p>A <code>PartExportPartMap</code> object that maps input types to part assignment.</p>
+                                                <p>A <code>PartExportPartMap</code> object that maps part values to exportparts assignment.</p>
                                             </div>
                                         </td>
                                         <td data-label="Value Type">
@@ -213,7 +182,7 @@
                     </header>
                     <div class="content">
                         <div class="description">
-                            <p><em>*<span class="label">Note</span>: <span class="message">This is the function that provides the main processing for the <code>assignPartsAsExportPartsAttribute()</code> function. It's not necesarry to use this function in order to assign <code>exportparts</code> values.</span></em></p>
+                            <p><em>*<span class="label">Note</span>: <span class="note">This is the function that provides the main processing for the <code>assignPartsAsExportPartsAttribute()</code> function. It's not necesarry to use this function in order to assign <code>exportparts</code> values.</span></em></p>
                             <p>For each element in the shadow root used as the function's first parameter, the function collects the element's <code>part</code> attribute values and adds them to a cumulative <code>string</code> value that can be assigned to an element.</p>
                             <p>By default, the function will not add newlines to the return value. For debugging purposes, though, that is an option that can be toggled with the function's second parameter.</p>
                         </div>
@@ -285,7 +254,7 @@
                                         <td data-label="Description">
                                             <div class="cell-content">
                                                 <p><em>Optional</em></p>
-                                                <p>A <code>PartExportPartMap</code> object that maps parts to exportparts assignment.</p>
+                                                <p>A <code>PartExportPartMap</code> object that maps part values to exportparts assignment.</p>
                                             </div>
                                         </td>
                                         <td data-label="Value Type">
@@ -310,6 +279,6 @@
             </footer>
         </article>
     </main>
-    <link rel="stylesheet" href="../docs.css">
+    <link rel="stylesheet" href="../docs.theme.css">
 </body>
 </html>

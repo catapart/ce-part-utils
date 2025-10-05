@@ -13,6 +13,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "test": "vite build --watch && vite preview",
     "test:build": "pnpm vite build --config vite.config.tests.ts",
     "release": "pnpm run build && changeset publish"
   },
