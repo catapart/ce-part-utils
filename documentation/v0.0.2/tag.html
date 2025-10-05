@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Documentation page for the ce-part-utils library">
-    <title>ce-part-utils | Class And ID Functions | v0.0.2</title>
+    <title>ce-part-utils | Element Tag | v0.0.2</title>
 </head>
 <body id="document">
     <main>
         <article>
             <header>
-                <h2 id="page-title">Class And ID Functions</h2>
+                <h2>Element Tag</h2>
             </header>
             <section>
-                <div class="function">
-                    <header id="classid">
-                        <h3><code>assignClassAndIdToPart</code></h3>
-                        <div class="return-value">
-                            <h5 class="label">Return Type</h5>
-                            <div class="value"><code>undefined</code></div>
-                        </div>
+                <div class="object">
+                    <header id="tagmap">
+                        <h3><code>TagPartMap</code></h3>
                     </header>
+                    <div class="description">
+                        <p>Maps an element's <code>tag</code> to a string value that will be used as a <code>part</code> value for elements with that <code>tag</code>.</p>
+                        <p>Tag names are lowercase. Can map any number of tags to part values.</p>
+                        <p>Optional second parameter of the <code>assignTagToPart()</code> function.</p>
+                        <p>The <code>TagPartMap</code> object is a configuration object and each of its properties act like keys. It does not expose any methods.</p>
+                    </div>
                     <div class="content">
-                        <div class="description">
-                            <p>Takes a shadow root as a parameter and then queries for any of its decendants that have <code>id</code> or <code>class</code> attributes.</p>
-                            <p>For each element returned by the query, the function assigns the element's <code>id</code> attribute value, and each of its <code>class</code> values, to its <code>part</code> attribute.</p>
-                        </div>
-                        <details class="function-table parameters" open>
+                        <details class="object-table properties" open>
                             <summary class="table-header">
-                                <h4>Parameters</h4>
+                                <h4>Properties</h4>
                             </summary>
                             <table>
                                 <thead>
@@ -43,17 +41,19 @@
                                     <tr>
                                         <td data-label="Name">
                                             <div class="cell-content">
-                                                <code>shadowRoot</code>
+                                                [ <code>HTMLElement</code> tag ]
                                             </div>
                                         </td>
                                         <td data-label="Description">
                                             <div class="cell-content">
-                                                <p>The shadow root of the target custom element.</p>
+                                                <p>The tag name of any well-known HTML element.</p>
+                                                <p>The configuration object may include any number or HTML tags as properties.</p>
+                                                <p>The value that those properties are set to is a <code>string</code> value that will be assigned as a part for all elements with tags that match the key.</p>
                                             </div>
                                         </td>
                                         <td data-label="Value Type">
                                             <div class="cell-content">
-                                                <code>ShadowRoot</code>
+                                                <pre><code>string</code></pre>
                                             </div>
                                         </td>
                                         <td data-label="Default Value">
@@ -65,65 +65,19 @@
                                 </tbody>
                             </table>
                         </details>
-                    </div>
-                </div>
-                <div class="function">
-                    <header id="id">
-                        <h3><code>assignIdToPart</code></h3>
-                        <div class="return-value">
-                            <h5 class="label">Return Type</h5>
-                            <div class="value"><code>undefined</code></div>
-                        </div>
-                    </header>
-                    <div class="content">
-                        <div class="description">
-                            <p>Takes a shadow root as a parameter and then queries for any of its decendants that have an <code>id</code> attribute.</p>
-                            <p>For each element returned by the query, the function assigns the element's <code>id</code> attribute value to its <code>part</code> attribute.</p>
-                        </div>
-                        <details class="function-table parameters" open>
-                            <summary class="table-header">
-                                <h4>Parameters</h4>
+                        <details class="object-table methods" open>
+                            <summary>
+                                <h4>Methods</h4>
                             </summary>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Value Type</th>
-                                        <th>Default Value</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-label="Name">
-                                            <div class="cell-content">
-                                                <code>shadowRoot</code>
-                                            </div>
-                                        </td>
-                                        <td data-label="Description">
-                                            <div class="cell-content">
-                                                <p>The shadow root of the target custom element.</p>
-                                            </div>
-                                        </td>
-                                        <td data-label="Value Type">
-                                            <div class="cell-content">
-                                                <code>ShadowRoot</code>
-                                            </div>
-                                        </td>
-                                        <td data-label="Default Value">
-                                            <div class="cell-content">
-                                                <pre><code>undefined</code></pre>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="message">
+                                <p>This object does not expose any methods.</p>
+                            </div>
                         </details>
                     </div>
                 </div>
                 <div class="function">
-                    <header id="class">
-                        <h3><code>assignClassToPart</code></h3>
+                    <header id="assign">
+                        <h3><code>assignTagToPart</code></h3>
                         <div class="return-value">
                             <h5 class="label">Return Type</h5>
                             <div class="value"><code>undefined</code></div>
@@ -131,10 +85,10 @@
                     </header>
                     <div class="content">
                         <div class="description">
-                            <p>Takes a shadow root as a parameter and then queries for any of its decendants that have <code>class</code> attributes.</p>
-                            <p>For each element returned by the query, the function assigns the element's <code>class</code> values, to its <code>part</code> attribute.</p>
+                            <p>Takes a shadow root and an optional configuration object as parameters and then queries for all of its decendant nodes.</p>
+                            <p>For each element returned by the query, the function assigns the element's tag to its <code>part</code> attribute.</p>
                         </div>
-                        <details class="function-table parameters" open>
+                        <details class="property-table parameters" open>
                             <summary class="table-header">
                                 <h4>Parameters</h4>
                             </summary>
@@ -166,7 +120,30 @@
                                         </td>
                                         <td data-label="Default Value">
                                             <div class="cell-content">
-                                                <pre><code>undefined</code></pre>
+                                                <code>undefined</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>config?</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p><em>Optional</em></p>
+                                                <p>A <code>TagPartMap</code> object that maps element tag names to part assignment.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>TagPartMap</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>undefined</code>
                                             </div>
                                         </td>
                                     </tr>

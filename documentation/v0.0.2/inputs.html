@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation page for the ce-part-utils library">
+    <title>ce-part-utils | Inputs and Fields | v0.0.2</title>
+</head>
+<body id="document">
+    <main>
+        <article>
+            <header>
+                <h2>Inputs and Fields</h2>
+            </header>
+            <section>
+                <div class="object">
+                    <header id="tagmap">
+                        <h3><code>InputTypePartMap</code></h3>
+                    </header>
+                    <div class="description">
+                        <p>Maps an <code>&lt;input&gt;</code>'s <code>type</code> to a string value that will be used as a <code>part</code> value for <code>&lt;input&gt;</code>s of that <code>type</code>.</p>
+                        <p>Optional second parameter of the <code>assignInputTypeToPart()</code> function.</p>
+                        <p>The <code>InputTypePartMap</code> object is a configuration object and each of its properties act like keys. It does not expose any methods.</p>
+                        <p>The configuration does include an additional property which maps <code>&lt;input&gt;</code>s that have a type of <code>text</code> and also an <code>inputmode</code> attribute with a value of <code>numeric</code>. Those <code>&lt;input&gt;</code>s can be mapped separately in case "numeric" <code>&lt;input&gt;</code>s should be styled differently than <code>text</code> <code>&lt;input&gt;</code>s.</p>
+                    </div>
+                    <div class="content">
+                        <details class="object-table properties" open>
+                            <summary class="table-header">
+                                <h4>Properties</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>button</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>button</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"button"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>checkbox</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>checkbox</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"checkbox"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>color</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>color</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"color"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>date</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>date</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"date"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>"datetime-local"</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>datetime-local</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"datetime-local"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>email</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>email</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"email"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>file</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>file</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"file"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>hidden</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>hidden</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"hidden"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>image</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>image</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"image"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>month</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>month</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"month"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>number</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>number</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"number"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>password</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>password</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"password"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>radio</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>radio</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"radio"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>range</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>range</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"range"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>reset</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>reset</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"reset"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>search</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>search</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"search"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>submit</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>submit</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"submit"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>tel</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>tel</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"tel"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>text</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>text</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"text"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>time</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>time</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"time"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>url</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>url</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"url"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>week</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>week</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"week"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>"text-numeric"</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>Maps to <code>&lt;input&gt;</code>s with the <code>type</code> attribute set to <code>text</code> that also include an <code>inputmode</code> attribute set to <code>numeric</code>.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>string</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>"number"</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                        <details class="object-table methods" open>
+                            <summary>
+                                <h4>Methods</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Function Name</th>
+                                        <th>Parameters</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                None
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>This object does not expose any methods.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Function Name">
+                                            <div class="cell-content">
+                                                N/A
+                                            </div>
+                                        </td>
+                                        <td data-label="Parameters">
+                                            <div class="cell-content">
+                                                N/A
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+                <div class="function">
+                    <header id="assign">
+                        <h3><code>assignInputTypeToPart</code></h3>
+                        <div class="return-value">
+                            <h5 class="label">Return Type</h5>
+                            <div class="value"><code>undefined</code></div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="description">
+                            <p>Takes a shadow root and an optional configuration object as parameters and then queries for all of the child <code>&lt;input&gt;</code> elements.</p>
+                            <p>For each element returned by the query, the function assigns the element's <code>type</code> attribute value to its <code>part</code> attribute.</p>
+                        </div>
+                        <details class="property-table parameters" open>
+                            <summary class="table-header">
+                                <h4>Parameters</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>shadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>The shadow root of the target custom element.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>ShadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>config?</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p><em>Optional</em></p>
+                                                <p>An <code>InputTypePartMap</code> object that maps input types to part assignment.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>InputTypePartMap</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>undefined</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+                <div class="function">
+                    <header id="field">
+                        <h3><code>assignFormFieldPartAttributes</code></h3>
+                        <div class="return-value">
+                            <h5 class="label">Return Type</h5>
+                            <div class="value"><code>undefined</code></div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="description">
+                            <p><em>*<span class="label">Note</span>: <span class="note">The <code>&lt;form-field&gt;</code> element is a custom element. This function only processes that specific custom element.</span></em></p>
+                            <p>Takes a shadow root and an optional configuration object as parameters and then queries for all of the child <code>&lt;form-field&gt;</code> elements.</p>
+                            <p>For each element returned by the query, the function assigns <code>part</code> values to the field element and its children, prefixed by <code>field-</code> and corresponding to the element's role in the field.</p>
+                        </div>
+                        <details class="property-table parameters" open>
+                            <summary class="table-header">
+                                <h4>Parameters</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>shadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>The shadow root of the target custom element.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>ShadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>undefined</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <footer>
+
+            </footer>
+        </article>
+    </main>
+    <link rel="stylesheet" href="../docs.css">
+</body>
+</html>

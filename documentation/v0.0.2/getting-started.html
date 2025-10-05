@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation page for the ce-part-utils library">
+    <title>ce-part-utils | Getting Started | v0.0.2</title>
+</head>
+<body id="document">
+    <main>
+        <article>
+            <header>
+                <h2>Getting Started</h2>
+            </header>
+            <section>
+                <div class="step">
+                    <header><h3>Install</h3></header>
+                    <p>To begin, install the library.</p>
+                    <p>The library can be installed using a script tag:</p>
+                    <div class="source html">
+                        <header>
+                            <h4 class="title"></h4>
+                            <span class="language">html</span>
+                        </header>
+                        <textarea spellcheck="false" class="html">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                    <p>The library can also be installed using a package manager:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">npm</h4>
+                            <span class="language">console</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">bun</h4>
+                            <span class="language">console</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">pnpm</h4>
+                            <span class="language">console</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">deno</h4>
+                            <span class="language">console</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">yarn</h4>
+                            <span class="language">console</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                </div>
+                <div class="step">
+                    <header><h3>Import</h3></header>
+                    <p>Next, import a function from the library into your custom element:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">Import <code>es</code> module</h4>
+                            <span class="language">javascript</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                    <p>If you prefer to use <code>umd</code> modules, import from the <code>ce-part-utils.umd.js</code> file:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">Import <code>umd</code> module</h4>
+                            <span class="language">javascript</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils.umd';</textarea>
+                    </div>
+                    <p>Both the default <code>es</code> module and the <code>umd</code> module also have minified variants that can be imported with the <code>.min.js</code> extension:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">Import minified modules</h4>
+                            <span class="language">javascript</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils.umd';</textarea>
+                    </div>
+                </div>
+                <div class="step">
+                    <header><h3>Provide a shadow root</h3></header>
+                    <p>This library works on child elements of a shadow root, which is a tightly-scoped document within custom HTML elements that, among other things, does not inherit styles.</p>
+                    <p>To use the library, create a custom element and attach its shadow root:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">Create a custom element</h4>
+                            <span class="language">javascript</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                    <p>Once a custom element is added to the document, the library functions can be called on it by passing in its <code>shadowRoot</code> property:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">Call a function</h4>
+                            <span class="language">javascript</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils.umd';</textarea>
+                    </div>
+                    <p>Mapping configuration objects can be used by the functions to translate from element tag, input type, or part (for exportparts translation) to any arbitrary string:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">Use config objects</h4>
+                            <span class="language">javascript</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils.umd';</textarea>
+                    </div>
+                </div>
+                <div class="step">
+                    <header><h3>Troubleshooting</h3></header>
+                    <p>Custom elements must be established within the javascript scope in order to have their shadow roots queried.</p>
+                    <p>When using this library outside of a custom element's own <code>connectedCallback</code> method, <code>await</code> the <code>whenDefined()</code> promise for that custom element before using any of the library functions:</p>
+                    <div class="source js">
+                        <header>
+                            <h4 class="title">Use <code>whenDefined()</code></h4>
+                            <span class="language">javascript</span>
+                        </header>
+                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils';</textarea>
+                    </div>
+                </div>
+            </section>
+            <footer>
+
+            </footer>
+        </article>
+    </main>
+    <link rel="stylesheet" href="../docs.css">
+</body>
+</html>
