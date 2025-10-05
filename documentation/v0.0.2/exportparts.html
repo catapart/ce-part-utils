@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation page for the ce-part-utils library">
+    <title>ce-part-utils | exportparts Features | v0.0.2</title>
+</head>
+<body id="document">
+    <main>
+        <article>
+            <header>
+                <h2><code>exportparts</code> Features</h2>
+            </header>
+            <section>
+                <div class="object">
+                    <header id="tagmap">
+                        <h3><code>PartExportPartMap</code></h3>
+                    </header>
+                    <div class="description">
+                        <p>Maps how an element's <code>part</code> values are assigned as <code>exportparts</code> values.</p>
+                        <p>Optional third parameter of the <code>assignPartsAsExportPartsAttribute()</code> and <code>getExportPartsFromParts()</code> functions.</p>
+                        <p>The <code>PartExportPartMap</code> object is a configuration object and each of its properties act like keys. It does not expose any methods.</p>
+                    </div>
+                    <div class="content">
+                        <details class="object-table properties" open>
+                            <summary class="table-header">
+                                <h4>Properties</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                [ <code>part</code> value ]
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>A part value on an element in the target shadow root.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <pre><code>string</code></pre>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                        <details class="object-table methods" open>
+                            <summary>
+                                <h4>Methods</h4>
+                            </summary>
+                            <div class="message">
+                                <p>This object does not expose any methods.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="function">
+                    <header id="assign">
+                        <h3><code>assignPartsAsExportPartsAttribute</code></h3>
+                        <div class="return-value">
+                            <h5 class="label">Return Type</h5>
+                            <div class="value"><code>undefined</code></div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="description">
+                            <p>For each element in the shadow root used as the function's first parameter, the function assigns the element's <code>part</code> attribute values to its parent's <code>exportparts</code> attribute.</p>
+                            <p>By default, the function will not add newlines to the <code>exportparts</code> attribute value. For debugging purposes, though, that is an option that can be toggled with the function's second parameter.</p>
+                        </div>
+                        <details class="property-table parameters" open>
+                            <summary class="table-header">
+                                <h4>Parameters</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>shadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>The shadow root of the target custom element.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>ShadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>addNewlines?</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p><em>Optional</em></p>
+                                                <p>Determines whether to add newlines to the <code>exportparts</code> value or not.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>boolean</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>false</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>config?</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p><em>Optional</em></p>
+                                                <p>A <code>PartExportPartMap</code> object that maps part values to exportparts assignment.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>PartExportPartMap</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+                <div class="function">
+                    <header id="get">
+                        <h3><code>getExportPartsFromParts</code></h3>
+                        <div class="return-value">
+                            <h5 class="label">Return Type</h5>
+                            <div class="value"><code>string</code></div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="description">
+                            <p><em>*<span class="label">Note</span>: <span class="note">This is the function that provides the main processing for the <code>assignPartsAsExportPartsAttribute()</code> function. It's not necesarry to use this function in order to assign <code>exportparts</code> values.</span></em></p>
+                            <p>For each element in the shadow root used as the function's first parameter, the function collects the element's <code>part</code> attribute values and adds them to a cumulative <code>string</code> value that can be assigned to an element.</p>
+                            <p>By default, the function will not add newlines to the return value. For debugging purposes, though, that is an option that can be toggled with the function's second parameter.</p>
+                        </div>
+                        <details class="property-table parameters" open>
+                            <summary class="table-header">
+                                <h4>Parameters</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>shadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>The shadow root of the target custom element.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>ShadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>addNewlines?</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p><em>Optional</em></p>
+                                                <p>Determines whether to add newlines to the return value or not.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>boolean</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <code>false</code>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>config?</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p><em>Optional</em></p>
+                                                <p>A <code>PartExportPartMap</code> object that maps part values to exportparts assignment.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>PartExportPartMap</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <footer>
+
+            </footer>
+        </article>
+    </main>
+    <link rel="stylesheet" href="../docs.theme.css">
+</body>
+</html>

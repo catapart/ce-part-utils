@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Introduction to the ce-part-utils library">
     <title>ce-part-utils Introduction</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./introduction/index.css">
     <noscript>
         <style>
             code-example { display: none; }
@@ -51,7 +51,7 @@
                         </a>
                     </div>
                     <div class="actions">
-                        <a href="./tests/">Test Runner</a>
+                        <a href="./test-runner/">Test Runner</a>
                         <a href="./documentation/">Documentation</a>
                     </div>
                 </div>
@@ -673,7 +673,7 @@ custom-element::part(button)
                     <div class="text">
                         <p>Converting <code>part</code> values to <code>exportparts</code> values can be done with the <code>assignPartsAsExportPartsAttribute()</code> function.</p>
                         <p>This type of part exporting is useful for exposing the parts of a "nested" element. Unlike a "child" element, a "nested" element is one that is owned by a custom element's shadow root. That nested element's parts would be inaccessible if they were not assigned to the element's <code>exportparts</code> attribute.</p>
-                        <p>For each element in the shadow root used as the function's first parameter, the function assigns the element's <code>part</code> attribute values to its parent's <code>exportparts</code> attribute. Elements that have had their parts added to the <code>exporparts</code> attribute of their parents can be selected using a <code>::part()</code> selector.</p>
+                        <p>For each element in the shadow root used as the function's first parameter, the function assigns the element's <code>part</code> attribute values to its parent's <code>exportparts</code> attribute. Elements that have had their parts added to the <code>exportparts</code> attribute of their parents can be selected using a <code>::part()</code> selector.</p>
                         <p>By default, the function will not add newlines to the <code>exportparts</code> attribute value. For debugging purposes, though, that is an option that can be toggled with the function's second parameter.</p>
                     </div>
                 </div>
@@ -1095,7 +1095,7 @@ custom-element-a::part(sanitized-part)
                 d="M 3.4576701 7.3225505 C 2.7690951 7.3213805 2.2350057 7.3720625 2.2350057 7.494633 L 2.2350057 9.0232218 C 2.2350057 9.1184548 2.7525801 9.1953044 3.3956584 9.1953044 L 19.248437 9.1953044 C 19.891514 9.1953044 20.40909 9.1184551 20.40909 9.0232218 L 20.40909 7.494633 C 20.40909 7.3994 19.891514 7.3225505 19.248437 7.3225505 C 13.985042 7.3179605 8.7209569 7.3295905 3.4576701 7.3225505 z M 3.4540527 10.162687 C 2.7978218 10.162386 2.2819878 10.175425 2.2427572 10.205579 C 2.2425013 10.205826 2.2419161 10.206362 2.2417236 10.206612 L 2.2412069 10.207129 L 2.2412069 10.207646 L 2.2412069 10.208162 L 2.2412069 10.208679 L 2.2412069 10.61899 C 2.2412069 10.64454 2.7542563 10.664982 3.392041 10.664982 L 19.114079 10.664982 C 19.751861 10.664982 20.26543 10.64454 20.26543 10.61899 L 20.26543 10.208679 C 20.26543 10.183129 19.751861 10.162687 19.114079 10.162687 C 13.894008 10.161487 8.6740147 10.164587 3.4540527 10.162687 z M 3.4540527 11.750187 C 2.7978218 11.749886 2.2819878 11.762925 2.2427572 11.793079 C 2.2425013 11.793326 2.2419161 11.793862 2.2417236 11.794112 L 2.2412069 11.794629 L 2.2412069 11.795146 L 2.2412069 11.795662 L 2.2412069 11.796179 L 2.2412069 12.20649 C 2.2412069 12.23204 2.7542563 12.252482 3.392041 12.252482 L 19.114079 12.252482 C 19.751861 12.252482 20.26543 12.23204 20.26543 12.20649 L 20.26543 11.796179 C 20.26543 11.770629 19.751861 11.750187 19.114079 11.750187 C 13.894008 11.748987 8.6740147 11.752087 3.4540527 11.750187 z M 3.4540527 13.337687 C 2.7978218 13.337386 2.2819878 13.350425 2.2427572 13.380579 C 2.2425013 13.380826 2.2419161 13.381362 2.2417236 13.381612 L 2.2412069 13.382129 L 2.2412069 13.382646 L 2.2412069 13.383162 L 2.2412069 13.383679 L 2.2412069 13.79399 C 2.2412069 13.81954 2.7542563 13.839982 3.392041 13.839982 L 19.114079 13.839982 C 19.751861 13.839982 20.26543 13.81954 20.26543 13.79399 L 20.26543 13.383679 C 20.26543 13.358129 19.751861 13.337687 19.114079 13.337687 C 13.894008 13.336487 8.6740147 13.339587 3.4540527 13.337687 z M 3.4540527 14.925187 C 2.7978218 14.924886 2.2819878 14.937925 2.2427572 14.968079 C 2.2425013 14.968326 2.2419161 14.968862 2.2417236 14.969112 L 2.2412069 14.969629 L 2.2412069 14.970146 L 2.2412069 14.970662 L 2.2412069 14.971179 L 2.2412069 15.38149 C 2.2412069 15.40704 2.7542563 15.427482 3.392041 15.427482 L 19.114079 15.427482 C 19.751861 15.427482 20.26543 15.40704 20.26543 15.38149 L 20.26543 14.971179 C 20.26543 14.945629 19.751861 14.925187 19.114079 14.925187 C 13.894008 14.923987 8.6740147 14.927087 3.4540527 14.925187 z M 3.4540527 16.512687 C 2.7978218 16.512386 2.2819878 16.525425 2.2427572 16.555579 C 2.2425013 16.555826 2.2419161 16.556362 2.2417236 16.556612 L 2.2412069 16.557129 L 2.2412069 16.557646 L 2.2412069 16.558162 L 2.2412069 16.558679 L 2.2412069 16.96899 C 2.2412069 16.99454 2.7542563 17.014982 3.392041 17.014982 L 19.114079 17.014982 C 19.751861 17.014982 20.26543 16.99454 20.26543 16.96899 L 20.26543 16.558679 C 20.26543 16.533129 19.751861 16.512687 19.114079 16.512687 C 13.894008 16.511487 8.6740147 16.514587 3.4540527 16.512687 z " />
         </svg>
     </div>
-    <link rel="stylesheet" href="./introduction.css">
-    <script type="module" src="./demolibs/code-example.min.js"></script>
+    <link rel="stylesheet" href="./introduction/introduction.css">
+    <script type="module" src="./introduction/libs/code-example.min.js"></script>
 </body>
 </html>
