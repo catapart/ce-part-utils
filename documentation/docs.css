@@ -273,6 +273,12 @@ table td::before
     font-size: .8em;
 }
 
+.source textarea
+{
+    min-height: 70px;
+    padding: var(--gap-small);
+}
+
 .function
 ,.object
 ,.constant
