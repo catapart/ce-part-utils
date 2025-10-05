@@ -29,12 +29,15 @@
     </header>
     <main>
         <test-runner>
-            <!-- <code-tests auto="false" src="./dist/ui.tests.js">
-                <span slot="title">UI</span>
+            <code-tests auto="false" src="./libs/tests/functions.tests.js">
+                <span slot="title">Functions</span>
             </code-tests>
-            <code-tests auto="false" src="./dist/open-game.tests.js">
-                <span slot="title">Open Game</span>
-            </code-tests> -->
+            <code-tests auto="false" src="./libs/tests/configurations.tests.js">
+                <span slot="title">Configurations</span>
+            </code-tests> 
+            <custom-element></custom-element>
+            <custom-element-a></custom-element-a>
+            <custom-element-b></custom-element-b>
         </test-runner>
     </main>
     <div id="icon-definitions">
@@ -50,6 +53,6 @@
     </div>
     <link rel="stylesheet" href="../introduction.css">
     <link rel="stylesheet" href="./tests.css">
-    <script type="module" src="./libs/test-runner.min.js"></script>
+    <script type="module" src="./libs/tests/tests.js"></script>
 </body>
 </html>

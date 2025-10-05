@@ -6,7 +6,7 @@
     <meta name="description" content="Documentation for the ce-part-utils library">
     <title>ce-part-utils Documentation</title>
 </head>
-<body>
+<body id="documentation">
     <header class="page-header">
         <div class="arrows">
             <span class="arrow">
@@ -30,23 +30,19 @@
     <main>
         <menu>
             <header><h2>Documents</h2></header>
-            <details>
+            <nav>
+                <iframe src="./v0.0.2/menu.html" name="menu" frameborder="0" id="menu"></iframe>
+            </nav>
+            <details id="versions">
                 <summary>
-                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
                     <span class="label">Versions</span>
                 </summary>
-                <ul id="versions">
-                    <li class="version">
-                        <a href="./v0.0.2/menu.html" target="menu">Latest</a>
-                    </li>
-                    <li class="version">
+                <ul class="items">
+                    <li class="item version">
                         <a href="./v0.0.2/menu.html" target="menu">0.0.2</a>
                     </li>
                 </ul>
             </details>
-            <nav>
-                <iframe src="./v0.0.2/menu.html" name="menu" frameborder="0" id="menu"></iframe>
-            </nav>
         </menu>
         <iframe src="./welcome.html" name="document" frameborder="0" id="document"></iframe>
     </main>
@@ -61,7 +57,7 @@
             </g>
         </svg>
     </div>
-    <link rel="stylesheet" href="../introduction.css">
-    <link rel="stylesheet" href="./documentation.css">
+    <!-- <link rel="stylesheet" href="../introduction.css"> -->
+    <link rel="stylesheet" href="./docs.css">
 </body>
 </html>

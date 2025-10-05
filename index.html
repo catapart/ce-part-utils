@@ -51,7 +51,7 @@
                         </a>
                     </div>
                     <div class="actions">
-                        <a href="./tests/">Test Runner</a>
+                        <a href="./test-runner/">Test Runner</a>
                         <a href="./documentation/">Documentation</a>
                     </div>
                 </div>
@@ -673,7 +673,7 @@ custom-element::part(button)
                     <div class="text">
                         <p>Converting <code>part</code> values to <code>exportparts</code> values can be done with the <code>assignPartsAsExportPartsAttribute()</code> function.</p>
                         <p>This type of part exporting is useful for exposing the parts of a "nested" element. Unlike a "child" element, a "nested" element is one that is owned by a custom element's shadow root. That nested element's parts would be inaccessible if they were not assigned to the element's <code>exportparts</code> attribute.</p>
-                        <p>For each element in the shadow root used as the function's first parameter, the function assigns the element's <code>part</code> attribute values to its parent's <code>exportparts</code> attribute. Elements that have had their parts added to the <code>exporparts</code> attribute of their parents can be selected using a <code>::part()</code> selector.</p>
+                        <p>For each element in the shadow root used as the function's first parameter, the function assigns the element's <code>part</code> attribute values to its parent's <code>exportparts</code> attribute. Elements that have had their parts added to the <code>exportparts</code> attribute of their parents can be selected using a <code>::part()</code> selector.</p>
                         <p>By default, the function will not add newlines to the <code>exportparts</code> attribute value. For debugging purposes, though, that is an option that can be toggled with the function's second parameter.</p>
                     </div>
                 </div>

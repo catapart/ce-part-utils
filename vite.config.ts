@@ -9,6 +9,10 @@ export default defineConfig({
         },
         minify: false,
         rollupOptions: {
+            external: [
+                '**/*tests.ts',
+                '**/*tests.js',
+            ],
             output: [
                 {
                     dir: 'dist',
@@ -37,5 +41,5 @@ export default defineConfig({
             ]
         }
     },
-    plugins: [dts()]
+    plugins: [dts({exclude: "**/*.test.ts"})]
 });
