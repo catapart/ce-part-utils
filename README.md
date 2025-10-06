@@ -47,7 +47,7 @@ Use `vite` to serve the `dist` directory. Useful for non-library projects, where
 #### `test:build`
 Use `vite` to transpile all files with a `.tests.[ts|js|tsx|jsx]` extension into the `test-runner` subdirectory. Creates javascript files that can be served to the `<test-runner>` and `<code-tests>` components.
 #### `test`
-Runs the `test:build` script and then serves the library website using `vite` configured to prevent module resolution issues that occur when running the `dev` script.
+Runs the `test:build` script and then serves the library website using `serve`, to prevent module resolution issues that occur when running the `dev` script.
 #### `release`
 Use `vite` to transpile the source code and then use `changesets` to begin the publication procedure for the repo environment (github or gitlab).  
 If code script is run during CI/CD for the `main` branch, the library is published. Otherwise, the library is linted and compiled.
@@ -55,6 +55,27 @@ If code script is run during CI/CD for the `main` branch, the library is publish
 ### Publishing
 #### Releasing with `changesets`
 //todo
+
+### Dependencies
+#### Library Dependencies
+*none*
+#### Development Dependencies
+##### [`typescript`](https://www.typescriptlang.org/)
+Type checking
+##### [`@changesets/cli`](https://github.com/changesets/changesets)
+Publishing and version management
+##### [`vite`](https://vite.dev/)
+Rapid development. Hot Module Reload and transpiliation
+##### [`vite-plugin-dts`](https://www.npmjs.com/package/vite-plugin-dts)
+Create types for es and umd modules on build
+##### [`@rollup/plugin-terser`](https://www.npmjs.com/package/@rollup/plugin-terser)
+Minification
+##### [`@magnit-ce/test-runner`](https://github.com/catapart/magnitce-test-runner)
+Automated tests
+##### [`glob`](https://www.npmjs.com/package/glob)
+Search for files that are tests
+##### [`serve`](https://www.npmjs.com/package/serve)
+Serve project directory without module resolution conflicts between vite and test-runner
 
 # Warning - Non-production package
 This project is being prepared for production, but is not ready to be used as a dependency for anything. There will be breaking changes and unrecoverable states. Do not use until this warning has been removed.

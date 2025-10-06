@@ -13,7 +13,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "vite build --watch && vite preview",
+    "test": "pnpm run test:build && pnpm serve ./",
     "test:build": "pnpm vite build --config vite.config.tests.ts",
     "release": "pnpm run build && changeset publish"
   },
@@ -22,6 +22,7 @@
     "@magnit-ce/test-runner": "^0.0.6",
     "@rollup/plugin-terser": "^0.4.4",
     "glob": "^11.0.3",
+    "serve": "^14.2.5",
     "typescript": "^5.5.3",
     "vite": "^7.1.7",
     "vite-plugin-dts": "^4.5.4"
