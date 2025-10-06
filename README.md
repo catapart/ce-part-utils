@@ -31,11 +31,11 @@ npm install
 
 ### Configuration
 #### `tsconfig.json`
-//todo
+Default from vite build
 #### `vite.config`
-//todo
+Defines custom inputs and outputs to exclude tests and create both es and umd modules
 #### `vite.config.tests.ts`
-//todo
+Defines custom inputs and outputs to include tests and output to the test-runner directory
 
 ### Scripts
 #### `dev`
@@ -54,7 +54,24 @@ If code script is run during CI/CD for the `main` branch, the library is publish
 
 ### Publishing
 #### Releasing with `changesets`
-//todo
+##### Github Steps
+1. **Run `changeset` command**: `npx @changesets/cli` | `bun ` | `pnpm changesets` | `yarn changesets`
+1. **Log version info**: Add a message that describes the changes in this version
+1. **Check in**: Push changes to repo
+1. **Merge**: Merge branch into `main`
+1.  **Merge Automation Branch**: Await repo automation's creation of a new pull request from a newly created branch. Accept the pull request, merging the branch into main.
+
+After automation completes, the new version will be published to `NPM`.
+
+##### Gitlab Steps
+// TODO: Fix these steps
+1. **Run `changeset` command**: `npx @changesets/cli` | `bun ` | `pnpm changesets` | `yarn changesets`
+1. **Log version info**: Add a message that describes the changes in this version
+1. **Check in**: Push changes to repo
+1. **Merge**: Merge branch into `main`
+1.  **Merge Automation Branch**: Await repo automation's creation of a new pull request from a newly created branch. Accept the pull request, merging the branch into main.
+
+After automation completes, the new version will be published to `NPM`.
 
 ### Dependencies
 #### Library Dependencies
