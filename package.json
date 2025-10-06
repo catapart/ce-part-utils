@@ -15,8 +15,7 @@
     "preview": "vite preview",
     "test": "npm run test:build && npm serve ./",
     "test:build": "npm vite build --config vite.config.tests.ts",
-    "release": "npm run build && npx @changesets/cli publish",
-    "release:pnpm": "pnpm run build && changesets publish"
+    "release": "npm run build && npx @changesets/cli publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
