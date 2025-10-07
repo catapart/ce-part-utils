@@ -1,13 +1,15 @@
-import { C as u, a as i, b as d, H as r, T as p, e as E, p as h } from "../test-runner-C5iXFQ_j.js";
+import { C as i, a as u, b as d, H as r, T as p, e as E, p as h } from "../test-runner-C5iXFQ_j.js";
 const t = "custom-element";
 class o extends HTMLElement {
   constructor() {
-    super(), this.attachShadow({ mode: "open" }), this.shadowRoot.innerHTML = `<form id="user" class="card interactive">
-            <input type="text" name="name" placeholder="Name" id="user-name" class="alpha value" />
-            <input type="text" name="age" placeholder="Age" inputmode="numeric" id="user-age" class="number value" />
-            <input type="checkbox" name="active" id="is-active" class="toggle value" />
-            <input type="submit" disabled id="user-submit" class="ok" />
-        </form>`;
+    super(), this.attachShadow({ mode: "open" }), this.shadowRoot.innerHTML = `<div id="component">
+            <form id="user" class="card interactive">
+                <input type="text" name="name" placeholder="Name" id="user-name" class="alpha value" />
+                <input type="text" name="age" placeholder="Age" inputmode="numeric" id="user-age" class="number value" />
+                <input type="checkbox" name="active" id="is-active" class="toggle value" />
+                <input type="submit" disabled id="user-submit" class="ok" />
+            </form>
+        </div>`;
   }
 }
 customElements.get(t) == null && customElements.define(t, o);
@@ -25,8 +27,8 @@ class m extends HTMLElement {
 customElements.get(s) == null && customElements.define(s, a);
 customElements.get(n) == null && customElements.define(n, m);
 export {
-  u as CodeTestEventType,
-  i as CodeTests,
+  i as CodeTestEventType,
+  u as CodeTests,
   d as CodeTestsElement,
   r as HookType,
   o as MyCustomElement,
