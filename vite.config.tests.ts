@@ -6,6 +6,11 @@ import { glob, globSync } from 'glob';
 import { fileURLToPath } from "url";
 
 export default defineConfig({
+    server: {
+        sourcemapIgnoreList(sourcePath, sourcemapPath) {
+           return sourcePath.includes('tests')
+        }
+    },
     build: {
         lib: {
             entry: ['src/tests/tests.ts'],

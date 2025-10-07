@@ -1,5 +1,5 @@
 import { e as t } from "../test-runner-C5iXFQ_j.js";
-import { a as s, d as o } from "../ce-part-utils-t71hqNPY.js";
+import { d as s, b as o } from "../ce-part-utils-ptBXdpX4.js";
 const m = {
   "should map element tags to part values": async () => {
     await customElements.whenDefined("custom-element");

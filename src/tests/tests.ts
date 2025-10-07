@@ -7,12 +7,14 @@ export class MyCustomElement extends HTMLElement
     {
         super();
         this.attachShadow({ mode: "open" });
-        this.shadowRoot!.innerHTML = `<form id="user" class="card interactive">
-            <input type="text" name="name" placeholder="Name" id="user-name" class="alpha value" />
-            <input type="text" name="age" placeholder="Age" inputmode="numeric" id="user-age" class="number value" />
-            <input type="checkbox" name="active" id="is-active" class="toggle value" />
-            <input type="submit" disabled id="user-submit" class="ok" />
-        </form>`
+        this.shadowRoot!.innerHTML = `<div id="component">
+            <form id="user" class="card interactive">
+                <input type="text" name="name" placeholder="Name" id="user-name" class="alpha value" />
+                <input type="text" name="age" placeholder="Age" inputmode="numeric" id="user-age" class="number value" />
+                <input type="checkbox" name="active" id="is-active" class="toggle value" />
+                <input type="submit" disabled id="user-submit" class="ok" />
+            </form>
+        </div>`
     }
 }
 

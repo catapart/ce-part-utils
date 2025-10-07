@@ -91,7 +91,7 @@ Minification
 Automated tests
 ##### [`glob`](https://www.npmjs.com/package/glob)
 Search for files that are tests
-##### [`serve`](https://www.npmjs.com/package/serve)
+##### [`@web/dev-server`](https://modern-web.dev/docs/dev-server/overview/)
 Serve project directory without module resolution conflicts between vite and test-runner
 
 # Warning - Non-production package
