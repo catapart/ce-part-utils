@@ -59,7 +59,7 @@ export class InputTypePartMap{
     time?:string;
     url?:string;
     week?:string;
-    ["text-numeric"]:string = "number";
+    ["text-numeric"]?:string;
 };
 export function assignInputTypeToPart(shadowRoot: ShadowRoot, config: InputTypePartMap = new InputTypePartMap())
 {
@@ -71,7 +71,7 @@ export function assignInputTypeToPart(shadowRoot: ShadowRoot, config: InputTypeP
         {
             if(elements[i].inputMode == "numeric")
             {
-                elements[i].part.add(config["text-numeric"]);
+                elements[i].part.add(config["text-numeric"] ?? 'text-numeric');
             }
         }
         elements[i].part.add(config[inputType] ?? inputType);

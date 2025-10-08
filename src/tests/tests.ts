@@ -52,3 +52,10 @@ if(customElements.get(COMPONENT_TAG_NAME_B) == null)
 {
     customElements.define(COMPONENT_TAG_NAME_B, MyCustomElementB);
 }
+
+export function reset()
+{
+    document.querySelector('custom-element')?.remove();
+    const customElement = document.createElement('custom-element');
+    document.querySelector('test-runner')!.append(customElement);
+}
