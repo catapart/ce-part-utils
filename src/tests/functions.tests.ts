@@ -1,31 +1,6 @@
 import { expect } from '@magnit-ce/test-runner'
 import { assignClassAndIdToPart, assignClassToPart, assignFormFieldPartAttributes, assignIdToPart, assignInputTypeToPart, assignPartsAsExportPartsAttribute, assignTagToPart, getExportPartsFromParts } from '../ce-part-utils';
-
-const SuccessValues = {
-    'ids': `<div id="component" part="component">
-    <form id="user" class="card interactive" part="user">
-        <input type="text" name="name" placeholder="Name" id="user-name" class="alpha value" part="user-name">
-        <input type="text" name="age" placeholder="Age" inputmode="numeric" id="user-age" class="number value" part="user-age">
-        <input type="checkbox" name="active" id="is-active" class="toggle value" part="is-active">
-        <input type="submit" disabled="" id="user-submit" class="ok" part="user-submit">
-    </form>
-</div>`,
-    'classes': ``,
-    'idsAndClasses': ``,
-    'tags': ``,
-    'inputs': ``,
-    'fields': ``,
-    'getexportparts': ``,
-    'exportparts': ``,
-
-}
-
-function reset()
-{
-    document.querySelector('custom-element')?.remove();
-    const customElement = document.createElement('custom-element');
-    document.querySelector('test-runner')!.append(customElement);
-}
+import { reset } from './tests';
 
 function testIds(customElement: HTMLElement)
 {
@@ -177,7 +152,7 @@ export default {
         {
             return accumulation == false ? false : exportPartsSet.has(value);
         }, true);
-        
+
         // convert parts to set and back to array to clear duplicate and make the expected and value actually match.
         return { success: hasAllParts, expected: Array.from(new Set(parts)), value: Array.from(exportPartsSet) };
     },

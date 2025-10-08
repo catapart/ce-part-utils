@@ -42,13 +42,13 @@ class g {
   time;
   url;
   week;
-  "text-numeric" = "number";
+  "text-numeric";
 }
 function P(e, s = new g()) {
   const t = [...e.querySelectorAll("input")];
   for (let r = 0; r < t.length; r++) {
     const a = t[r].type;
-    a == "text" && t[r].inputMode == "numeric" && t[r].part.add(s["text-numeric"]), t[r].part.add(s[a] ?? a);
+    a == "text" && t[r].inputMode == "numeric" && t[r].part.add(s["text-numeric"] ?? "text-numeric"), t[r].part.add(s[a] ?? a);
   }
 }
 function f(e, s = !1, t) {
