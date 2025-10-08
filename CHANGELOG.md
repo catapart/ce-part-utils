@@ -1,5 +1,11 @@
 # ce-part-utils
 
+## 0.0.3
+
+### Patch Changes
+
+- 94e32a0: fixed issue with numeric inputmode inputs not mapping to expected part value
+
 ## 0.0.2
 
 ### Patch Changes
