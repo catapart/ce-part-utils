@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Introduction to the ce-part-utils library">
     <title>ce-part-utils Introduction</title>
+    <link rel="stylesheet" href="./introduction/introduction.css">
     <link rel="stylesheet" href="./introduction/index.css">
     <noscript>
         <style>
@@ -140,13 +141,13 @@
                         });
                     });
                 </script>
-                <noscript>
+                <noscript class="centered-single-column">
                     <dl>
-                        <dt>npm</dt> <dd><code>npm install ce-part-utils</code></dd>
-                        <dt>bun</dt> <dd><code>bun add ce-part-utils</code></dd>
-                        <dt>pnpm</dt> <dd><code>pnpm install ce-part-utils</code></dd>
-                        <dt>deno</dt> <dd><code>deno install npm:ce-part-utils</code></dd>
-                        <dt>yarn</dt> <dd><code>yarn add ce-part-utils</code></dd>
+                        <dt>npm</dt> <dd><textarea>npm install @magnit-ce/code-example</textarea></dd>
+                        <dt>bun</dt> <dd><textarea>bun add @magnit-ce/code-example</textarea></dd>
+                        <dt>pnpm</dt> <dd><textarea>pnpm install @magnit-ce/code-example</textarea></dd>
+                        <dt>deno</dt> <dd><textarea>deno install npm:@magnit-ce/code-example</textarea></dd>
+                        <dt>yarn</dt> <dd><textarea>yarn add @magnit-ce/code-example</textarea></dd>
                     </ul>
                 </noscript>
             </div>
@@ -192,8 +193,11 @@
                 <h3>Quick Reference Tables</h3>
                 <p>Use the tables, below, to reference the key identifiers used by this library, including enumerators, assignments, constants, and other "well-known" content.</p>
             </section>
-            <div class="reference configs">
-                <header><h3>Configs</h3></header>
+            <details class="reference configs">
+                <summary class="title">
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <h4>Configs</h4>
+                </summary>
                 <table>
                     <thead>
                         <tr>
@@ -288,15 +292,21 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="reference enumerators">
-                <header><h3>Enumerators</h3></header>
+            </details>
+            <details class="reference enumerators">
+                <summary class="title">
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <h4>Enumerators</h4>
+                </summary>
                 <div class="message">
                     <p>This library does not expose any enumerators or enumerator-like objects.</p>
                 </div>
-            </div>
-            <div class="reference constants">
-                <header><h3>Constants</h3></header>
+            </details>
+            <details class="reference constants">
+                <summary class="title">
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <h4>Constants</h4>
+                </summary>
                 <table>
                     <thead>
                         <tr>
@@ -325,13 +335,16 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="reference assignments">
-                <header><h3>Assignments</h3></header>
+            </details>
+            <details class="reference assignments">
+                <summary class="title">
+                    <svg class="icon arrow-icon"><use href="#icon-definition_arrow"></use></svg>
+                    <h4>Assignments</h4>
+                </summary>
                 <div class="message">
                     <p>This library does not use any values directly from source code to assign values, properties, or attributes. All assignments, if any, are sourced from library input or from configuration content.</p>
                 </div>
-            </div>
+            </details>
         </article>
         <div class="examples">
             <header><h2>Examples</h2></header>
@@ -878,10 +891,7 @@ custom-element-a::part(sanitized-part)
         <footer class="full-width">
             <div id="footer-content">
                 <div id="version">
-                    <span class="label">Latest Version:</span>
-                    <span class="value">
-                        <a href="https://github.com/catapart/ce-part-utils/releases"><code>0.0.3</code></a>
-                    </span>
+                    <a href="https://github.com/catapart/ce-part-utils/releases">Releases</a>
                 </div>
                 <div id="license">
                     License:
@@ -1095,7 +1105,6 @@ custom-element-a::part(sanitized-part)
                 d="M 3.4576701 7.3225505 C 2.7690951 7.3213805 2.2350057 7.3720625 2.2350057 7.494633 L 2.2350057 9.0232218 C 2.2350057 9.1184548 2.7525801 9.1953044 3.3956584 9.1953044 L 19.248437 9.1953044 C 19.891514 9.1953044 20.40909 9.1184551 20.40909 9.0232218 L 20.40909 7.494633 C 20.40909 7.3994 19.891514 7.3225505 19.248437 7.3225505 C 13.985042 7.3179605 8.7209569 7.3295905 3.4576701 7.3225505 z M 3.4540527 10.162687 C 2.7978218 10.162386 2.2819878 10.175425 2.2427572 10.205579 C 2.2425013 10.205826 2.2419161 10.206362 2.2417236 10.206612 L 2.2412069 10.207129 L 2.2412069 10.207646 L 2.2412069 10.208162 L 2.2412069 10.208679 L 2.2412069 10.61899 C 2.2412069 10.64454 2.7542563 10.664982 3.392041 10.664982 L 19.114079 10.664982 C 19.751861 10.664982 20.26543 10.64454 20.26543 10.61899 L 20.26543 10.208679 C 20.26543 10.183129 19.751861 10.162687 19.114079 10.162687 C 13.894008 10.161487 8.6740147 10.164587 3.4540527 10.162687 z M 3.4540527 11.750187 C 2.7978218 11.749886 2.2819878 11.762925 2.2427572 11.793079 C 2.2425013 11.793326 2.2419161 11.793862 2.2417236 11.794112 L 2.2412069 11.794629 L 2.2412069 11.795146 L 2.2412069 11.795662 L 2.2412069 11.796179 L 2.2412069 12.20649 C 2.2412069 12.23204 2.7542563 12.252482 3.392041 12.252482 L 19.114079 12.252482 C 19.751861 12.252482 20.26543 12.23204 20.26543 12.20649 L 20.26543 11.796179 C 20.26543 11.770629 19.751861 11.750187 19.114079 11.750187 C 13.894008 11.748987 8.6740147 11.752087 3.4540527 11.750187 z M 3.4540527 13.337687 C 2.7978218 13.337386 2.2819878 13.350425 2.2427572 13.380579 C 2.2425013 13.380826 2.2419161 13.381362 2.2417236 13.381612 L 2.2412069 13.382129 L 2.2412069 13.382646 L 2.2412069 13.383162 L 2.2412069 13.383679 L 2.2412069 13.79399 C 2.2412069 13.81954 2.7542563 13.839982 3.392041 13.839982 L 19.114079 13.839982 C 19.751861 13.839982 20.26543 13.81954 20.26543 13.79399 L 20.26543 13.383679 C 20.26543 13.358129 19.751861 13.337687 19.114079 13.337687 C 13.894008 13.336487 8.6740147 13.339587 3.4540527 13.337687 z M 3.4540527 14.925187 C 2.7978218 14.924886 2.2819878 14.937925 2.2427572 14.968079 C 2.2425013 14.968326 2.2419161 14.968862 2.2417236 14.969112 L 2.2412069 14.969629 L 2.2412069 14.970146 L 2.2412069 14.970662 L 2.2412069 14.971179 L 2.2412069 15.38149 C 2.2412069 15.40704 2.7542563 15.427482 3.392041 15.427482 L 19.114079 15.427482 C 19.751861 15.427482 20.26543 15.40704 20.26543 15.38149 L 20.26543 14.971179 C 20.26543 14.945629 19.751861 14.925187 19.114079 14.925187 C 13.894008 14.923987 8.6740147 14.927087 3.4540527 14.925187 z M 3.4540527 16.512687 C 2.7978218 16.512386 2.2819878 16.525425 2.2427572 16.555579 C 2.2425013 16.555826 2.2419161 16.556362 2.2417236 16.556612 L 2.2412069 16.557129 L 2.2412069 16.557646 L 2.2412069 16.558162 L 2.2412069 16.558679 L 2.2412069 16.96899 C 2.2412069 16.99454 2.7542563 17.014982 3.392041 17.014982 L 19.114079 17.014982 C 19.751861 17.014982 20.26543 16.99454 20.26543 16.96899 L 20.26543 16.558679 C 20.26543 16.533129 19.751861 16.512687 19.114079 16.512687 C 13.894008 16.511487 8.6740147 16.514587 3.4540527 16.512687 z " />
         </svg>
     </div>
-    <link rel="stylesheet" href="./introduction/introduction.css">
     <script type="module" src="./introduction/libs/code-example.min.js"></script>
 </body>
 </html>
