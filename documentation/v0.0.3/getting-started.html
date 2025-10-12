@@ -77,7 +77,7 @@
                             <h4 class="title">Import <code>umd</code> module</h4>
                             <span class="language">javascript</span>
                         </header>
-                        <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils.umd';</textarea>
+                        <textarea spellcheck="false" class="js">const partUtils = require('ce-part-utils.umd');</textarea>
                     </div>
                     <p>Both the default <code>es</code> module and the <code>umd</code> module also have minified variants that can be imported with the <code>.min.js</code> extension:</p>
                     <div class="source js">
@@ -86,7 +86,7 @@
                             <span class="language">javascript</span>
                         </header>
                         <textarea spellcheck="false" class="js">import { assignClassAndIdToPart } from 'ce-part-utils.min';
-import { assignTagToPart } from 'ce-part-utils.umd.min';
+const partUtils = require('ce-part-utils.umd.min');
                         </textarea>
                     </div>
                 </div>

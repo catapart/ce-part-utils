@@ -171,7 +171,7 @@ p,li,dd,dt
 }
 dl
 {
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 dt
 {
@@ -630,7 +630,16 @@ footer
 
 .overview dl
 {
-    justify-self: center;
+    /* justify-self: center; */
+}
+.overview noscript
+{
+    --column-width: var(--paragraph-max-width);
+    --column-min-width: 30ch;
+}
+.overview noscript dd
+{
+    display: grid;
 }
 
 .documentation
@@ -670,19 +679,30 @@ footer
 {
     display: grid;
     gap: var(--gap);
-    margin-bottom: var(--gap-large);
+    /* margin-bottom: var(--gap-large); */
 }
 
-.quick-reference .reference > header h3
+.quick-reference .reference > .title
 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 900;
     background-color: var(--surface-reference-header);
     color: var(--text-highlight);
     border-radius: 5px;
     padding: var(--gap);
     text-shadow: 2px 2px 0 rgb(0 0 0 / .1);
+}
+
+.quick-reference .reference > .title h4
+{
+    margin: 0;
+    font-weight: 900;
+    padding: 0;
+    flex: 1;
+}
+
+.quick-reference td .key::after
+{
+    content: ':';
+    margin-right: 1ch;
 }
 
 
@@ -1087,6 +1107,13 @@ footer a:visited
         min-width: 10ch;
     }
 
+    :not(pre) > code
+    {
+        white-space: normal;
+        word-break: break-word;
+        max-width: 265px;
+    }
+
     main > header .content .text
     {
         grid-template-columns: auto 1fr;
@@ -1128,8 +1155,11 @@ footer a:visited
 
     .documentation .docs-info .description .actions
     {
-        grid-template-columns: 1fr 1fr;
         align-items: center;
+    }
+    .documentation .docs-info.example .description .actions
+    {
+        grid-template-columns: 1fr 1fr;
     }
     .documentation .docs-info .description .actions a
     {
@@ -1142,11 +1172,11 @@ footer a:visited
         text-align: center;
     }
 
-    .quick-reference .reference > header
+    .quick-reference .reference > .title
     {
         margin: 0 var(--gap-small);
     }
-    .quick-reference .reference > header h3
+    .quick-reference .reference > .title h4
     {
         font-size: 16px;
     }
@@ -1186,6 +1216,10 @@ footer a:visited
 /* desktop only */
 @media screen and (min-width: 650px)
 {
+    .documentation:has(.app)
+    {
+        grid-template-columns: 1fr 1fr;
+    }
     .card.horizontal
     {
         grid-template-rows: 1fr;
@@ -1195,9 +1229,12 @@ footer a:visited
     {
         font-size: 2em;
     }
+    .documentation:has(.app) > header
+    {
+        grid-column: span 2;
+    }
     .examples .example
     {
         padding: var(--gap-large);
     }
 }
-
