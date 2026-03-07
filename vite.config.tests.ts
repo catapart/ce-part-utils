@@ -20,7 +20,7 @@ export default defineConfig({
         copyPublicDir: false,
         rollupOptions: {
             input: Object.fromEntries(
-                globSync('./src/**/*tests.{js,ts,jsx,tsx}').map(file => [(() =>
+                globSync(['./src/**/*tests.{js,ts,jsx,tsx}']).map(file => [(() =>
                 {
                     // This removes `src/` as well as the file extension from each
                     // file, so e.g. src/nested/foo.js becomes nested/foo
@@ -28,6 +28,7 @@ export default defineConfig({
                         'src',
                         file.slice(0, file.length - extname(file).length)
                     );
+
                     if(path.startsWith('dev\\tests'))
                     {
                         path = path.substring(10)

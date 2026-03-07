@@ -26,16 +26,13 @@
 
 <body>
     <test-runner>
-        <code-tests auto="false" src="./tests/functions.tests.ts">
-            <span slot="title">Functions</span>
-        </code-tests>
-        <code-tests auto="false" src="./tests/configurations.tests.ts">
-            <span slot="title">Configurations</span>
-        </code-tests>
+        <code-tests auto="false" src="./tests/functions.tests.ts" label="Functions"></code-tests>
+        <code-tests auto="false" src="./tests/configurations.tests.ts" label="Configurations"></code-tests>
         <custom-element></custom-element>
         <custom-element-a></custom-element-a>
         <custom-element-b></custom-element-b>
     </test-runner>
+    <script type="module" src="./tests/tests.ts"></script>
     <script type="module" src="./dev.ts"></script>
 </body>
 

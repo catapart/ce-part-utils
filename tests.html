@@ -51,10 +51,10 @@
     </header>
     <main>
         <test-runner>
-            <code-tests auto="false" src="./public/tests/functions.tests.js">
-                <span slot="title">Functions</span>
+            <code-tests auto="false" src="./public/tests/functions.tests.js" label="Functions">
+                <span slot="description">Functions</span>
             </code-tests>
-            <code-tests auto="false" src="./public/tests/configurations.tests.js">
+            <code-tests auto="false" src="./public/tests/configurations.tests.js" label="Configurations">
                 <span slot="title">Configurations</span>
             </code-tests>
             <custom-element></custom-element>
@@ -74,6 +74,7 @@
         </svg>
     </div>
     <script type="module" src="public/libs/test-runner.min.js"></script>
+    <script type="module" src="public/tests/tests.js"></script>
     <script type="module" src="public/libs/ce-part-utils.min.js"></script>
 </body>
 

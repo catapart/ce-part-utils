@@ -1,5 +1,5 @@
 import { assignClassAndIdToPart, assignClassToPart, assignIdToPart, assignInputTypeToPart, assignPartsAsExportPartsAttribute, assignTagToPart, getExportPartsFromParts } from '../../ce-part-utils';
-import { reset } from '../shared';
+import { elementIsDefined, reset } from '../shared';
 
 function testIds(customElement: HTMLElement)
 {
@@ -41,7 +41,7 @@ function testClasses(customElement: HTMLElement)
 export default {
     'should assign from ids': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         reset();
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignIdToPart(customElement.shadowRoot!);
@@ -53,7 +53,7 @@ export default {
     },
     'should assign from classes': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         reset();
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignClassToPart(customElement.shadowRoot!);
@@ -65,7 +65,7 @@ export default {
     },
     'should assign from ids and classes at the same time': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         reset();
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignClassAndIdToPart(customElement.shadowRoot!);
@@ -79,7 +79,7 @@ export default {
     },
     'should assign from element tag': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         reset();
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignTagToPart(customElement.shadowRoot!);
@@ -102,7 +102,7 @@ export default {
     },
     'should assign from input type': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignInputTypeToPart(customElement.shadowRoot!);
         
@@ -131,7 +131,7 @@ export default {
     // },
     'should get valid exportparts string from shadow root children': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
 
         assignClassAndIdToPart(customElement.shadowRoot!);
@@ -157,7 +157,7 @@ export default {
     },
     'should export all parts of shadow root children': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignClassAndIdToPart(customElement.shadowRoot!);
         assignTagToPart(customElement.shadowRoot!);

@@ -1,11 +1,11 @@
 import { assignClassAndIdToPart, assignInputTypeToPart, assignPartsAsExportPartsAttribute, assignTagToPart } from '../../ce-part-utils';
-import { reset } from '../shared';
+import { elementIsDefined, reset } from '../shared';
 
 
 export default {
     'should map element tags to part values': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         reset();
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignTagToPart(customElement.shadowRoot!, {
@@ -40,7 +40,7 @@ export default {
     },
     'should map input types to part values': async () =>
     {
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         reset();
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignInputTypeToPart(customElement.shadowRoot!, {
@@ -80,7 +80,7 @@ export default {
     },
     'should map part values to exportparts values': async () =>
     {        
-        await customElements.whenDefined('custom-element');
+        await elementIsDefined('custom-element');
         reset();
         const customElement = document.querySelector<HTMLElement>('custom-element')!;
         assignClassAndIdToPart(customElement.shadowRoot!);
