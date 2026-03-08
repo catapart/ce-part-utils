@@ -5,7 +5,7 @@
       "name": "ce-part-utils",
       "devDependencies": {
         "@changesets/cli": "^2.27.7",
-        "@magnit-ce/test-runner": "^0.0.6",
+        "@magnit-ce/test-runner": "^0.0.7",
         "@rollup/plugin-terser": "^1.0.0",
         "changesets": "^1.0.2",
         "glob": "^13.0.0",
@@ -124,9 +124,9 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@magnit-ce/code-tests": ["@magnit-ce/code-tests@0.0.13", "", { "dependencies": { "ce-part-utils": "^0.0.0" } }, "sha512-dNGNso0Im1MsZfDwn6ePJBTIbkewmVgqqeSr1uYTUnymJOUELM0qpAhV6zPXJMkYqHT62TSAq9XQGIIf9il6Ww=="],
+    "@magnit-ce/code-tests": ["@magnit-ce/code-tests@0.1.6", "", {}, "sha512-cS62MPPbyHPrrhOJ9vRk8cLOb+vdeG/u0s9AjoNXm3Wo7Tm6qHtTfmXWLHM4MGNR2TmJCwQw46m9SGJijgZG4A=="],
 
-    "@magnit-ce/test-runner": ["@magnit-ce/test-runner@0.0.6", "", { "dependencies": { "@magnit-ce/code-tests": "^0.0.13", "ce-part-utils": "^0.0.0" } }, "sha512-EttfU2igEfp4GsMPMJBZfMCewreqXmmicrNVkU0JvHzPBLT3RlU3hQx1yg5/Mfrt0XQXeXBMNqJz8LOuBahAQQ=="],
+    "@magnit-ce/test-runner": ["@magnit-ce/test-runner@0.0.7", "", { "dependencies": { "@magnit-ce/code-tests": "^0.1.6" } }, "sha512-q7mTopFJOnU/vfrA9dMt599s00jVQ+Y0iyoco4Gq4i2uh0P1SVFFvAyeotXWz47UnCEHTr44N9aDWlQdRW6Qlw=="],
 
     "@manypkg/find-root": ["@manypkg/find-root@1.1.0", "", { "dependencies": { "@babel/runtime": "^7.5.5", "@types/node": "^12.7.1", "find-up": "^4.1.0", "fs-extra": "^8.1.0" } }, "sha512-mki5uBvhHzO8kYYix/WRy2WX8S3B5wdVSc9D6KcU5lQNglP2yt58/VfLuAK49glRXChosY8ap2oJ1qgma3GUVA=="],
 
@@ -259,8 +259,6 @@
     "braces": ["braces@3.0.3", "", { "dependencies": { "fill-range": "^7.1.1" } }, "sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA=="],
 
     "buffer-from": ["buffer-from@1.1.2", "", {}, "sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ=="],
-
-    "ce-part-utils": ["ce-part-utils@0.0.0", "", {}, "sha512-Q4oCUgZcBgXw82aNd3UD0vErBlCSgl/QhoqARM/UN7v/7inPeWtwzqYZs2ItgnGdGOeN023PlygEBsPZ0MxGoQ=="],
 
     "changesets": ["changesets@1.0.2", "", {}, "sha512-lnXvvqJEcK0z/6RtwKNLbejazl+Hxd1bocMcNgfLHWb4rGxuqkO/LdeGNzwIx3jHj+fNWZ6AGgK5AqNBwva4Xg=="],
 
