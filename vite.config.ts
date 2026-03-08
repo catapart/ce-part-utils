@@ -3,11 +3,15 @@ import { default as terser } from '@rollup/plugin-terser';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
+    server: {
+        
+    },
     build: {
         lib: {
-            entry: ['src/ce-part-utils.ts']
+            entry: ['src/ce-part-utils.ts'],
         },
         minify: false,
+        copyPublicDir: false,
         rollupOptions: {
             external: [
                 '**/*tests.ts',
@@ -17,7 +21,7 @@ export default defineConfig({
                 {
                     dir: 'dist',
                     entryFileNames: 'ce-part-utils.js',
-                    format: 'es'
+                    format: 'es',
                 },
                 {
                     dir: 'dist',
@@ -27,9 +31,9 @@ export default defineConfig({
                 },
                 {
                     dir: 'dist',
-                    entryFileNames: 'ce-part-utils.umd.js',
                     name: 'ce-part-utils.umd.js',
-                    format: 'umd'
+                    entryFileNames: 'ce-part-utils.umd.js',
+                    format: 'umd',
                 },
                 {
                     dir: 'dist',
@@ -41,5 +45,5 @@ export default defineConfig({
             ]
         }
     },
-    plugins: [dts({exclude: "**/*.test.ts"})]
+    plugins: [dts({ exclude: ["**/*.test.ts", 'src/dev'], rollupTypes: true })]
 });

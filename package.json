@@ -2,44 +2,44 @@
   "name": "ce-part-utils",
   "version": "0.0.4",
   "description": "Utilities for adding part and exportparts attributes to a custom HTML element, using classes, ids, tags and other element properties.",
-  "type": "module",
   "main": "dist/ce-part-utils.umd.js",
   "module": "dist/ce-part-utils.js",
   "types": "dist/ce-part-utils.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && cp dist/ce-part-utils.min.js public/libs",
     "preview": "vite preview",
-    "test:build": "vite build --config vite.config.tests.ts",
-    "test": "npm run test:build && web-dev-server --watch --app-index test-runner/index.html",
+    "build-tests": "vite build --config vite.config.tests.ts",
     "changeset": "npx @changesets/cli",
     "release": "npm run build && npx @changesets/cli publish"
   },
-  "devDependencies": {
-    "@changesets/cli": "^2.27.7",
-    "@magnit-ce/test-runner": "^0.0.6",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@web/dev-server": "^0.4.6",
-    "glob": "^11.0.3",
-    "typescript": "^5.5.3",
-    "vite": "^7.1.7",
-    "vite-plugin-dts": "^4.5.4"
-  },
-  "license": "CC0-1.0",
-  "author": "catapart",
   "keywords": [
     "custom",
     "element",
     "html",
+    "browser",
     "part",
     "exportparts",
     "attribute",
     "component",
     "web component"
   ],
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@magnit-ce/test-runner": "^0.0.7",
+    "@rollup/plugin-terser": "^1.0.0",
+    "changesets": "^1.0.2",
+    "glob": "^13.0.0",
+    "typescript": "^5.5.3",
+    "vite": "^7.3.0",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "author": "catapart",
+  "license": "CC0-1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/catapart/ce-part-utils"

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation page for the ce-part-utils library">
+    <title>ce-part-utils | Class and ID Functions | 0.0.0</title>
+    <link rel="stylesheet" href="../docs.theme.css">
+</head>
+
+<body id="document">
+    <main>
+        <article>
+            <header>
+                Class and ID Functions
+            </header>
+            <section>
+                <div class="function">
+                    <header id="classid">
+                        <h3><code>assignClassAndIdToPart</code></h3>
+                        <div class="return-value">
+                            <h5 class="label">Return Type</h5>
+                            <div class="value"><code>undefined</code></div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="description">
+                            <p>Takes a shadow root as a parameter and then queries for any of its decendants that have <code>id</code> or <code>class</code> attributes.</p>
+                            <p>For each element returned by the query, the function assigns the element's <code>id</code> attribute value, and each of its <code>class</code> values, to its <code>part</code> attribute.</p>
+                        </div>
+                        <details class="function-table parameters" open>
+                            <summary class="table-header">
+                                <h4>Parameters</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>shadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>The shadow root of the target custom element.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>ShadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+                <div class="function">
+                    <header id="id">
+                        <h3><code>assignIdToPart</code></h3>
+                        <div class="return-value">
+                            <h5 class="label">Return Type</h5>
+                            <div class="value"><code>undefined</code></div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="description">
+                            <p>Takes a shadow root as a parameter and then queries for any of its decendants that have an <code>id</code> attribute.</p>
+                            <p>For each element returned by the query, the function assigns the element's <code>id</code> attribute value to its <code>part</code> attribute.</p>
+                        </div>
+                        <details class="function-table parameters" open>
+                            <summary class="table-header">
+                                <h4>Parameters</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>shadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>The shadow root of the target custom element.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>ShadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+                <div class="function">
+                    <header id="class">
+                        <h3><code>assignClassToPart</code></h3>
+                        <div class="return-value">
+                            <h5 class="label">Return Type</h5>
+                            <div class="value"><code>undefined</code></div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <div class="description">
+                            <p>Takes a shadow root as a parameter and then queries for any of its decendants that have <code>class</code> attributes.</p>
+                            <p>For each element returned by the query, the function assigns the element's <code>class</code> values, to its <code>part</code> attribute.</p>
+                        </div>
+                        <details class="function-table parameters" open>
+                            <summary class="table-header">
+                                <h4>Parameters</h4>
+                            </summary>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Value Type</th>
+                                        <th>Default Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Name">
+                                            <div class="cell-content">
+                                                <code>shadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Description">
+                                            <div class="cell-content">
+                                                <p>The shadow root of the target custom element.</p>
+                                            </div>
+                                        </td>
+                                        <td data-label="Value Type">
+                                            <div class="cell-content">
+                                                <code>ShadowRoot</code>
+                                            </div>
+                                        </td>
+                                        <td data-label="Default Value">
+                                            <div class="cell-content">
+                                                <pre><code>undefined</code></pre>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <footer>
+
+            </footer>
+        </article>
+    </main>
+</body>
+
+</html>
